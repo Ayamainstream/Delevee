@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Deliveee</title>
+  <link rel="icon" href="photo/icon.png">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+  <link rel="stylesheet" href="node_modules/sweetalert2.min.css">
+</head>
+
+<body>
+  <div class="section1">
+    <div class="top">
+      <div class="row">
+        <div class="col-lg-6"><a href="index.html" target="_blank" style="text-decoration:none;">
+            <h2 style="color: #00a082;"><img src="photo/icon.png" alt="icon">Delivee</h2>
+          </a></div>
+        <div class="col-lg-6">
+          <div class="buttons">
+            <button type="button" class="btn btn-primary bt1 btn-lg btt" onclick="alert()" style="margin-right:10px;">Зарегистрироваться</button>
+            <button type="button" class="btn btn-primary bt1 btn-lg btt1" onclick="alert1()">Войти</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="sectionname">
+      <img src="photo/shop.png" alt="meal" style="width:45px;">
+      <p>Магазин</p>
+    </div>
+
+    <hr>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" style="color:black;" style="text-decoration:none;">Главная страница</a></li>
+        <li class="breadcrumb-item active" aria-current="page" style="font-family: 'Montserrat';">Магазин</li>
+      </ol>
+    </nav>
+
+    <h2 style="padding: 20px 0; font-size: 2.5rem; font-family: 'Montserrat'; font-weight:700;">Продукты в <span class="text1">Нурсултане</span></h2>
+
+  <div class="d-sm-none d-lg-block d-none">
+    <div class="typesfood">
+      <div class="row">
+        <div><button type="button" class="btn btn-primary btntypes" onclick="filter('all')"><i class="fas fa-border-all"></i> Показать все</button></div>
+        <div><button type="button" class="btn btn-primary btntypes" onclick="filter('sweets')"><img src="https://img.icons8.com/fluent-systems-filled/20/000000/sweet-halloween-candy.png" /> Сладости</button></div>
+        <div><button type="button" class="btn btn-primary btntypes" onclick="filter('icecream')"><img src="https://img.icons8.com/wired/20/000000/ice-cream-cone.png" /> Мороженое</button></div>
+        <div><button type="button" class="btn btn-primary btntypes" onclick="filter('milka')"><img src="https://img.icons8.com/pastel-glyph/20/000000/milk-bottle.png" /> Молочные продукты</button></div>
+        <div><button type="button" class="btn btn-primary btntypes" onclick="filter('drinks')"><img src="https://img.icons8.com/small/20/000000/soda-bottle.png" /> Напитки</button></div>
+        <div><button type="button" class="btn btn-primary btntypes" onclick="filter('fruit')"><img src="https://img.icons8.com/small/20/000000/apple.png" /> Фрукты</button></div>
+        <div><button type="button" class="btn btn-primary btntypes" onclick="filter('vegetables')"><img src="https://img.icons8.com/small/20/000000/salad.png" /> Овощи</button></div>
+      </div>
+    </div>
+  </div>
+    <div class="d-block d-sm-none d-none d-sm-block d-md-block d-lg-none">
+      <div class="dropdown" style="margin-left:7%;">
+        <button class="btn btn-secondary dropdown-toggle btndrop" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="filter('all')">
+          Варианты
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="border-radius:20px;">
+          <a class="dropdown-item" onclick="filter('all')"><i class="fas fa-border-all"></i> Показать все</a>
+          <a class="dropdown-item" onclick="filter('sweets')"><img src="https://img.icons8.com/fluent-systems-filled/20/000000/sweet-halloween-candy.png" /> Сладости</a>
+          <a class="dropdown-item"  onclick="filter('icecream')"><img src="https://img.icons8.com/wired/20/000000/ice-cream-cone.png" /> Мороженое</a>
+          <a class="dropdown-item"  onclick="filter('milka')"><img src="https://img.icons8.com/pastel-glyph/20/000000/milk-bottle.png" /> Молочные продукты</a>
+          <a class="dropdown-item" onclick="filter('drinks')"><img src="https://img.icons8.com/small/20/000000/soda-bottle.png" /> Напитки</a>
+          <a class="dropdown-item" onclick="filter('fruit')"><img src="https://img.icons8.com/small/20/000000/apple.png" /> Фрукты</a>
+          <a class="dropdown-item" onclick="filter('vegetables')"><img src="https://img.icons8.com/small/20/000000/salad.png" /> Овощи</a>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="options">
+      <div class="a drinks">
+        <img src="photo/shop13.jpg" alt="food">
+        <h4 class="text2">550 тенге</h4>
+      </div>
+      <div class="a fruit
+          ">
+        <img src="photo/shop5.jpg" alt="vegan candy">
+        <h4 class="text2">420 тг/кг</h4>
+      </div>
+      <div class="a vegetables">
+        <img src="photo/shop7.jpg" alt="medicine">
+        <h4 class="text2">750 тенге</h4>
+      </div>
+      <div class="a fruit">
+        <img src="photo/shop4.jpg" alt="cheese">
+        <h4 class="text2">850 тг/кг</h4>
+      </div>
+      <div class="a sweets">
+        <img src="photo/shop2.jpg" alt="game">
+        <h4 class="text2">420 тенге</h4>
+      </div>
+      <div class="a milka">
+        <img src="photo/shop6.jpg" alt="rose">
+        <h4 class="text2">300 тенге</h4>
+      </div>
+      <div class="a milka">
+        <img src="photo/shop1" alt="cheese">
+        <h4 class="text2">250 тенге</h4>
+      </div>
+      <div class="a icecream">
+        <img src="photo/shop8.jpg" alt="game">
+        <h4 class="text2">320 тенге</h4>
+      </div>
+      <div class="a milka">
+        <img src="photo/shop9.jpg" alt="rose">
+        <h4 class="text2">350 тенге</h4>
+      </div>
+      <div class="a fruit">
+        <img src="photo/shop10.jpg" alt="cheese">
+        <h4 class="text2">600 тг/кг</h4>
+      </div>
+      <div class="a vegetables">
+        <img src="photo/shop11.jpg" alt="game">
+        <h4 class="text2">80 тг/кг</h4>
+      </div>
+      <div class="a icecream">
+        <img src="photo/shop12.jpg" alt="rose">
+        <h4 class="text2">400 тенге</h4>
+      </div>
+      <div class="a sweets">
+        <img src="photo/shop3.jpg" alt="cheese">
+        <h4 class="text2">380 тенге</h4>
+      </div>
+      <div class="a drinks">
+        <img src="photo/shop14.jpg" alt="game">
+        <h4 class="text2">350 тенге</h4>
+      </div>
+      <div class="a sweets">
+        <img src="photo/shop15.jpg" alt="rose">
+        <h4 class="text2">1450 тенге</h4>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid footer">
+    <div class="container footer">
+      <a href="index.html" style="text-decoration:none;" target="_blank">
+        <h1 class="text9">Delivee</h1>
+      </a>
+      <div class="row footer">
+        <div col-sm-4>
+          <div class="boxfooter">
+            <h5 class="text10">Сделаем это вместе</h5>
+            <a href="" style="text-decoration:none;">
+              <p class="text11">Вакансии</p>
+            </a>
+            <a href="" style="text-decoration:none;">
+              <p class="text11">Партнерские магазины</p>
+            </a>
+            <a href="" style="text-decoration:none;">
+              <p class="text11">Курьеры</p>
+            </a>
+          </div>
+        </div>
+        <div <col-sm-4>
+          <div class="boxfooter">
+            <h5 class="text10">Мы в социальных сетях</h5>
+            <a href="" style="text-decoration:none;">
+              <p class="text11">Facebook</p>
+            </a>
+            <a href="" style="text-decoration:none;">
+              <p class="text11">Twitter</p>
+            </a>
+            <a href="" style="text-decoration:none;">
+              <p class="text11">Instagram</p>
+            </a>
+          </div>
+        </div>
+        <div col-sm-4>
+          <div class="boxfooter">
+            <button type="button" class="btn btn-outline-light footer">
+              <div class="mac">
+                <i class="fab fa-apple fa-2x"></i>
+              </div>
+              <div>
+                Download on Appstore
+              </div>
+            </button>
+            <br>
+            <button type="button" class="btn btn-outline-light footer">
+              <div class="mac">
+                <i class="fab fa-google-play fa-lg"></i>
+              </div>
+              <div>Download on Google Play</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript" src="shop.js">
+  </script>
+</body>
+
+</html>

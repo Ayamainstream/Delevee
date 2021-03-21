@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 60%;
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  padding: 6px 12%;
+  margin: 0 auto;
+  z-index: 1000;
+  transition: top 0.8s;
+}
+
+#navbar h2 {
+  font-size: 3.5rem;
+}
+
+.hero__background {
+    z-index: 0;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    font-family: "object-fit:cover";
+    object-fit: cover;
+}
+
+.container{
+  align-items: center;
+}
+
+@media screen and (max-width: 60em){
+.col-b{
+    text-align: center;
+  }
+}
+
+.image {
+  padding-left: 30px;
+  width: 500px;
+}
+
+.container{
+  padding: 15rem 5rem;
+  display: block;
+}
+
+@media screen and (min-width: 60em){
+.grid {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: calc(-1*1.5rem);
+  }
+}
+
+.grid{
+  max-width: 100rem;
+  min-height: 300px;
+}
+
+.col-b .heading{
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.col-b .body{
+  padding: 2rem 0;
+  font-size: 1.8rem;
+  text-align: left;
+  color: gray;
+}
+
+.col-b .button {
+    display: block;
+    min-width: 12em;
+    padding: .5em 3em;
+    color: #fff;
+    border: 2px solid #00a082;
+    background-color: #00a082;
+    border-radius: 2em;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.col-b .button:hover {
+  color: #00a082;
+  border: 2px solid #00a082;
+  background-color: #fff;
+  border-radius: 2em;
+}
+
+@media screen and (min-width: 60em){
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+.container {
+    position: relative;
+    background-color: #222;
+    color: #e4e4e4;
+    padding: 5rem 0;
+}
+
+.h-snap-child {
+    scroll-snap-align: start;
+}
+
+@media screen and (min-width: 60em){
+.inner{
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 60em){
+.tabs{
+    position: relative;
+    max-width: 59.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 60em){
+.heading-wrapper {
+    margin-left: calc(-1*1.5rem);
+    transform: translateY(100%);
+  }
+}
+
+@media screen and (min-width: 60em){
+.heading {
+    color: #9b9b9b;;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0;
+    padding-left: 1.5rem;
+    width: 58%;
+    margin-left: 42%;
+  }
+}
+.heading {
+    margin-top: 0;
+    padding: 0 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.03;
+    text-align: center;
+}
+
+@media screen and (min-width: 60em){
+.tabs-buttons-wrapper {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    right: 0;
+    display: flex;
+    margin-left: calc(-1*1.5rem);
+  }
+}
+
+@media screen and (min-width: 40em){
+.tabs__buttons {
+    justify-content: center;
+    overflow-x: auto;
+  }
+}
+
+.tabs__buttons {
+    display: flex;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1em 0;
+    overflow-x: scroll;
+}
+
+.button[aria-selected=true]{
+    font-weight: 700;
+    color: #ffc244;
+}
+@media screen and (min-width: 60em){
+.button{
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+}
+.button {
+    display: block;
+    margin-left: 2rem;
+    padding: 0;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.h-reset-input {
+    appearance: none;
+    outline: none;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    font-weight: inherit;
+    border: none;
+    border-radius: 0;
+}
